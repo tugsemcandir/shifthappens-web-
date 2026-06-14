@@ -1,112 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShiftHappens | Edge-Native Probabilistic Engine</title>
+    <title>ShiftHappens | Edge-Native Personal Twin</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-bg { background-color: #1e293b; border: 1px solid #334155; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #030712; color: #f8fafc; overflow-x: hidden; }
+        .glass-nav { background: rgba(3, 7, 18, 0.7); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-text { background: linear-gradient(135deg, #38bdf8 0%, #34d399 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow-bg { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(3, 7, 18, 0) 70%); border-radius: 50%; z-index: -1; }
+        .card-border { border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(17, 24, 39, 0.6); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased selection:bg-sky-500 selection:text-white">
 
-    <!-- Navbar -->
-    <nav class="flex items-center justify-between p-6 max-w-7xl mx-auto border-b border-gray-800">
-        <div class="text-2xl font-bold tracking-tighter">Shift<span class="text-sky-400">Happens</span></div>
-        <div class="hidden md:flex space-x-6 text-sm font-semibold text-gray-400">
-            <a href="#features" class="hover:text-white transition">Core Technology</a>
-            <a href="#future" class="hover:text-white transition">Future Vision</a>
-            <a href="#developer" class="hover:text-white transition">The Developer</a>
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter">Shift<span class="text-sky-400">Happens</span></div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="#product" class="hover:text-white transition">The Product</a>
+                <a href="#architecture" class="hover:text-white transition">Architecture</a>
+                <a href="#vision" class="hover:text-white transition">Vision</a>
+            </div>
+            <a href="#creator" class="px-5 py-2 text-sm font-semibold text-white bg-white/10 hover:bg-white/20 rounded-full transition border border-white/5">Developer</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="flex flex-col items-center justify-center text-center px-6 py-32 max-w-5xl mx-auto">
-        <div class="inline-block px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wide mb-6">
-            100% Localhost Isolation • Zero Data Leak
+    <section class="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="glow-bg top-0 left-1/2 -translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-16">
+            
+            <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-bold tracking-wide uppercase mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Zero Deep Learning Required
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1]">
+                    Behavior Tracking, <br>
+                    <span class="gradient-text">Reimagined.</span>
+                </h1>
+                <p class="text-lg lg:text-xl text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    A lightweight Personal Twin architecture designed for local processing and absolute privacy on everyday consumer devices.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#product" class="px-8 py-4 rounded-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-bold transition shadow-[0_0_20px_rgba(56,189,248,0.4)]">Explore the Tech</a>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 relative" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                <div class="absolute inset-0 bg-gradient-to-tr from-sky-500/20 to-emerald-500/20 blur-3xl rounded-full"></div>
+                <img src="app-ui.png" alt="Shift Happens App UI" class="relative z-10 w-full max-w-lg mx-auto drop-shadow-2xl transform hover:-translate-y-2 transition duration-500">
+            </div>
         </div>
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
-            Behavioral Tracking, <br> <span class="gradient-text">Reimagined for the Edge.</span>
-        </h1>
-        <p class="text-xl text-gray-400 mb-10 max-w-3xl leading-relaxed">
-            Eliminating cloud dependency. Our edge-native probabilistic architecture reduces CPU overhead by 93% and cuts system response time down to just 12 seconds.
-        </p>
-    </header>
+    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center">The Architecture</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <div class="card-bg p-8 rounded-2xl">
-                    <div class="w-12 h-12 bg-sky-500/20 text-sky-400 rounded-xl flex items-center justify-center mb-6 text-2xl">⚡</div>
-                    <h3 class="text-xl font-bold mb-3">Soft Probabilistic Engine</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Replaces rigid baselines with dynamic tolerance margins. Natural human behavioral drift is absorbed mathematically without triggering false anomaly errors.</p>
+    <section class="py-12 border-y border-white/5 bg-white/[0.02]" id="product">
+        <div class="max-w-6xl mx-auto px-6" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="text-center mb-10">
+                <h2 class="text-sm font-bold tracking-widest text-gray-500 uppercase">Proving the Concept</h2>
+            </div>
+            <img src="results.png" alt="Performance Results 90% Accuracy, 12s Response, 93% CPU" class="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl border border-white/10">
+        </div>
+    </section>
+
+    <section class="py-32 relative" id="architecture">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 space-y-40">
+            
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 order-2 lg:order-1" data-aos="fade-right">
+                    <img src="edge.png" alt="Edge Native Architecture" class="w-full rounded-2xl border border-white/10 shadow-2xl bg-white/5 p-4">
                 </div>
-
-                <div class="card-bg p-8 rounded-2xl">
-                    <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center mb-6 text-2xl">🔒</div>
-                    <h3 class="text-xl font-bold mb-3">Absolute Privacy</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">A strict zero-data-leak protocol. The isolated local database secures all user data directly within the device, structurally blocking external transmissions.</p>
+                <div class="lg:w-1/2 order-1 lg:order-2" data-aos="fade-left">
+                    <div class="w-12 h-12 bg-sky-500/20 text-sky-400 rounded-xl flex items-center justify-center mb-6 text-2xl">🔒</div>
+                    <h2 class="text-4xl font-bold mb-6">100% Localhost Isolation</h2>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        Conventional models transmit continuous tracking data to external servers, creating heavy latency. Our framework structurally blocks external pings, executing a strict zero-data-leak protocol directly on the device.
+                    </p>
                 </div>
+            </div>
 
-                <div class="card-bg p-8 rounded-2xl">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center mb-6 text-2xl">⚡</div>
+                    <h2 class="text-4xl font-bold mb-6">Soft Probabilistic Engine</h2>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        Human behavior cannot be confined to rigid temporal bounds. Instead of triggering false errors when you wake up 20 minutes late, the statistical model expands tolerance margins like an elastic band to temporarily absorb temporal drift.
+                    </p>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <img src="engine.png" alt="Soft Probabilistic Engine Graph" class="w-full rounded-2xl border border-white/10 shadow-2xl bg-white/5 p-4">
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 order-2 lg:order-1" data-aos="fade-up">
+                    <img src="system.png" alt="System Architecture" class="w-full rounded-2xl border border-white/10 shadow-2xl bg-white/5 p-4">
+                </div>
+                <div class="lg:w-1/2 order-1 lg:order-2" data-aos="fade-up">
                     <div class="w-12 h-12 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center mb-6 text-2xl">⚙️</div>
-                    <h3 class="text-xl font-bold mb-3">Rule-Based Decision</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">No black-box AI. A transparent shift protocol dynamically updates baselines and adapts to your routine mechanics seamlessly.</p>
+                    <h2 class="text-4xl font-bold mb-6">Under The Hood</h2>
+                    <p class="text-lg text-gray-400 leading-relaxed">
+                        A completely isolated, three-tier ecosystem. A streamlined Frontend hides complex math, the Local Engine executes rule-based shift decisions without cloud dependency, and the Local DB acts as an impenetrable safe for behavioral data.
+                    </p>
                 </div>
+            </div>
 
+        </div>
+    </section>
+
+    <section class="py-24 bg-gradient-to-b from-transparent to-slate-900/50 border-t border-white/5" id="vision">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-6">Building an Autonomous Ecosystem</h2>
+                <p class="text-xl text-gray-400">Transitioning from a monitoring application to an intelligent partner that anticipates user needs without explicit commands.</p>
+            </div>
+            
+            <div class="flex justify-center" data-aos="zoom-in" data-aos-delay="200">
+                <img src="future.png" alt="Future Vision" class="w-full max-w-5xl rounded-2xl border border-white/10 shadow-2xl bg-white/5 p-2 hover:border-sky-500/50 transition duration-500">
             </div>
         </div>
     </section>
 
-    <!-- Future Work Section -->
-    <section id="future" class="py-24">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Building an Autonomous Ecosystem</h2>
-                <p class="text-gray-400">Our ultimate objective is to refine the logic into a proactive helper that anticipates your needs.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="card-bg p-10 rounded-2xl border-l-4 border-l-sky-500">
-                    <h3 class="text-2xl font-bold mb-4">Health Sync Integration</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Interfacing with wearable devices to ingest real-time physiological data. By monitoring fatigue via a smartwatch, the engine executes "Soft Shifts" to prioritize your recovery.</p>
+    <section class="py-32 relative overflow-hidden" id="creator">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[400px] bg-sky-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+        <div class="max-w-3xl mx-auto px-6 text-center relative z-10" data-aos="fade-up">
+            <h2 class="text-sm font-bold tracking-widest text-sky-400 uppercase mb-8">System Architect & Developer</h2>
+            
+            <div class="card-border p-12 rounded-3xl inline-block w-full sm:w-auto shadow-2xl">
+                <div class="w-28 h-28 bg-gradient-to-tr from-sky-400 to-emerald-400 rounded-full mx-auto mb-6 border-4 border-slate-900 shadow-inner flex items-center justify-center text-4xl font-bold text-slate-900">
+                    TÇ
                 </div>
-                <div class="card-bg p-10 rounded-2xl border-l-4 border-l-emerald-500">
-                    <h3 class="text-2xl font-bold mb-4">Smart Home Interoperability</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">Connecting with local smart home protocols for autonomous environment management. Woke up late? The system automatically delays your coffee machine.</p>
-                </div>
+                <h3 class="text-3xl font-extrabold mb-2 text-white">Tuğsem Çandır</h3>
+                <p class="text-sky-400 font-semibold text-lg tracking-wide">Mechatronics Engineering</p>
+                <div class="w-12 h-1 bg-white/10 mx-auto my-6 rounded-full"></div>
+                <p class="text-gray-400 text-sm tracking-wider uppercase font-medium">Bahçeşehir University</p>
             </div>
         </div>
     </section>
 
-    <!-- Developer Section -->
-    <section id="developer" class="py-20 bg-slate-900 border-t border-gray-800">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-12">Project Creator</h2>
-            <div class="flex flex-wrap justify-center gap-8">
-                
-                <div class="w-80 p-8 card-bg rounded-xl text-center">
-                    <div class="w-24 h-24 bg-gradient-to-tr from-sky-500 to-indigo-500 rounded-full mx-auto mb-6 border-4 border-slate-900"></div>
-                    <h4 class="text-2xl font-bold mb-2">Tuğsem Çandır</h4>
-                    <p class="text-sky-400 text-md font-semibold">Mechatronics Engineering</p>
-                    <p class="text-gray-400 text-sm mt-4">Bahçeşehir University</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 text-center text-gray-500 text-sm border-t border-gray-800 mt-12">
-        <p>Bahçeşehir University | Edge-Native Probabilistic Architecture</p>
+    <footer class="py-10 text-center text-gray-600 text-sm border-t border-white/5 bg-[#02040a]">
+        <p>© 2026 ShiftHappens | Edge-Native Personal Twin Architecture</p>
     </footer>
 
+    <script>
+        // Initialize Animate On Scroll
+        AOS.init({
+            once: true,
+            offset: 50,
+        });
+    </script>
 </body>
 </html>
