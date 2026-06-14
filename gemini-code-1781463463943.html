@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShiftHappens | Edge-Native Probabilistic Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-bg { background-color: #1e293b; border: 1px solid #334155; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between p-6 max-w-7xl mx-auto border-b border-gray-800">
+        <div class="text-2xl font-bold tracking-tighter">Shift<span class="text-sky-400">Happens</span></div>
+        <div class="hidden md:flex space-x-6 text-sm font-semibold text-gray-400">
+            <a href="#features" class="hover:text-white transition">Core Technology</a>
+            <a href="#future" class="hover:text-white transition">Future Vision</a>
+            <a href="#team" class="hover:text-white transition">The Team</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="flex flex-col items-center justify-center text-center px-6 py-32 max-w-5xl mx-auto">
+        <div class="inline-block px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wide mb-6">
+            100% Localhost Isolation • Zero Data Leak
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-tight">
+            Behavioral Tracking, <br> <span class="gradient-text">Reimagined for the Edge.</span>
+        </h1>
+        <p class="text-xl text-gray-400 mb-10 max-w-3xl leading-relaxed">
+            Eliminating cloud dependency. Our edge-native probabilistic architecture reduces CPU overhead by 93% and cuts system response time down to just 12 seconds.
+        </p>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">The Architecture</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="card-bg p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-sky-500/20 text-sky-400 rounded-xl flex items-center justify-center mb-6 text-2xl">⚡</div>
+                    <h3 class="text-xl font-bold mb-3">Soft Probabilistic Engine</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Replaces rigid baselines with dynamic tolerance margins. Natural human behavioral drift is absorbed mathematically without triggering false anomaly errors.</p>
+                </div>
+
+                <div class="card-bg p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center mb-6 text-2xl">🔒</div>
+                    <h3 class="text-xl font-bold mb-3">Absolute Privacy</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">A strict zero-data-leak protocol. The isolated local database secures all user data directly within the device, structurally blocking external transmissions.</p>
+                </div>
+
+                <div class="card-bg p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center mb-6 text-2xl">⚙️</div>
+                    <h3 class="text-xl font-bold mb-3">Rule-Based Decision</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">No black-box AI. A transparent shift protocol dynamically updates baselines and adapts to your routine mechanics seamlessly.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Work Section -->
+    <section id="future" class="py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Building an Autonomous Ecosystem</h2>
+                <p class="text-gray-400">Our ultimate objective is to refine the logic into a proactive helper that anticipates your needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="card-bg p-10 rounded-2xl border-l-4 border-l-sky-500">
+                    <h3 class="text-2xl font-bold mb-4">Health Sync Integration</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Interfacing with wearable devices to ingest real-time physiological data. By monitoring fatigue via a smartwatch, the engine executes "Soft Shifts" to prioritize your recovery.</p>
+                </div>
+                <div class="card-bg p-10 rounded-2xl border-l-4 border-l-emerald-500">
+                    <h3 class="text-2xl font-bold mb-4">Smart Home Interoperability</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Connecting with local smart home protocols for autonomous environment management. Woke up late? The system automatically delays your coffee machine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-slate-900 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12">The Team</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                
+                <div class="w-64 p-6 card-bg rounded-xl text-center">
+                    <div class="w-20 h-20 bg-gradient-to-tr from-sky-500 to-indigo-500 rounded-full mx-auto mb-4 border-4 border-slate-900"></div>
+                    <h4 class="text-lg font-bold">Tuğsem Çandır</h4>
+                    <p class="text-sky-400 text-sm font-semibold">Management Engineering</p>
+                </div>
+
+                <div class="w-64 p-6 card-bg rounded-xl text-center">
+                    <div class="w-20 h-20 bg-slate-700 rounded-full mx-auto mb-4 border-4 border-slate-900"></div>
+                    <h4 class="text-lg font-bold">Utku</h4>
+                    <p class="text-gray-400 text-sm">Analysis & Design</p>
+                </div>
+
+                <div class="w-64 p-6 card-bg rounded-xl text-center">
+                    <div class="w-20 h-20 bg-slate-700 rounded-full mx-auto mb-4 border-4 border-slate-900"></div>
+                    <h4 class="text-lg font-bold">Aslı</h4>
+                    <p class="text-gray-400 text-sm">Software Development</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-500 text-sm border-t border-gray-800 mt-12">
+        <p>Bahçeşehir University | Edge-Native Probabilistic Architecture</p>
+    </footer>
+
+</body>
+</html>
